@@ -1,4 +1,6 @@
-﻿namespace DataStructures
+﻿using System.ComponentModel;
+
+namespace DataStructures
 {
     public class CustomArray
     {
@@ -26,8 +28,8 @@
             else
             {
                 Items[Count++] = value;               
-            }
-            return Items;
+            }            
+            return Items;            
         }
 
         public void RemoveAt(int index)
@@ -49,6 +51,15 @@
             {
                 Console.WriteLine(Items[i]);
             }
+        }
+
+        public int indexOf(int value)
+        {
+            for (int i = 0; i < Count; i++)
+            {
+                if (Items[i] == value) return i;
+            }
+            return -1;
         }
     }
 }

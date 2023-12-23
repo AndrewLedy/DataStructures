@@ -13,4 +13,5 @@ array.Insert(5);
 array.Print();
 array.RemoveAt(4);
 array.Print();
+Console.WriteLine(array.indexOf(100));
 Console.ReadLine();
