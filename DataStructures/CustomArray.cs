@@ -53,13 +53,29 @@ namespace DataStructures
             }
         }
 
-        public int indexOf(int value)
+        public int IndexOf(int value)
         {
             for (int i = 0; i < Count; i++)
             {
                 if (Items[i] == value) return i;
             }
             return -1;
+        }
+
+        public int Max()
+        {
+            return Items.Max();
+        }
+
+        public int[] Intersect()
+        {
+            int[] cloneItems = Items;
+            return Items.Intersect(cloneItems.ToList()).ToArray();
+        }
+
+        public int[] Reverse()
+        {
+            return Items.Reverse().ToArray();
         }
     }
 }
